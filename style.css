@@ -1,10 +1,46 @@
-*{
-    height: 100%;
-    width: 100%;
-}
-@media (max-width:578px){
-    .grid-container{
-        display: grid;
-        
+
+  @media (max-width: 578px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
+      grid-template-rows: 50px 40px 1.5fr 1fr;
+      grid-template-areas:
+        ". header header header header ."
+        ". nav nav nav nav ."
+        ". content content content content ."
+        ". faq faq faq faq .";
     }
-}
+  
+    header {
+      grid-area: header;
+      display: grid;
+      grid-template-columns: 1fr 4fr 1fr;
+      grid-template-areas: "wrench head theme";
+      align-items: center;
+      padding: 0.5rem;
+    }
+  
+    .wrench {
+      grid-area: wrench;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .head {
+      grid-area: head;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .theme {
+      grid-area: theme;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
