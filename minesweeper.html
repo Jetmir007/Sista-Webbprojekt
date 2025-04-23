@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
+    <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
+    <script src="node_modules/bulma-toast/dist/bulma-toast.min.js"></script>
+    <script src="https://kit.fontawesome.com/5fa0058b85.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-    
+    <div class="grid-container">
+        <header id="header">
+            <div class="wrench">
+                <button class="open-nav" id="nav-open" onclick="Nav()"><i class="fa-solid fa-wrench fa-xl"></i></button>
+            </div>
+            <h1 class="head">
+                Min Sida
+            </h1>
+            <div class="theme">
+                <i class="fa-solid fa-sun fa-xl" id="sol" onclick="ToggleD()"></i>
+                <i class="fa-solid fa-moon fa-xl" id="måne" onclick="ToggleL()"></i>
+            </div>
+        </header>
+        <nav class="nav" id="dropdown">
+                <a href="index.html" id="home" class="subtitle">Home</a>
+                <a href="minesweeper.html" id="game" class="subtitle">Minesweeper</a>
+                <a href="" class="subtitle" id="form">Contact Us</a>
+            </div>
+        </nav>
+    </div>
 </body>
 </html>

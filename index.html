@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +13,26 @@
 </head>
 <body>
     <div class="grid-container">
-        <header>
-            <h1 class="head">
-                Min Sida
-            </h1>
+        <header id="header">
             <div class="wrench">
-                <i class="fa-solid fa-wrench fa-xl"></i>
+                <button class="open-nav" id="nav-open" onclick="Nav()"><i class="fa-solid fa-wrench fa-xl"></i></button>
             </div>
+            <h1 class="head">
+                Tore Sivertson
+            </h1>
             <div class="theme">
-                <i class="fa-solid fa-sun fa-xl"></i>
+                <i class="fa-solid fa-sun fa-xl" id="sol" onclick="ToggleD()"></i>
+                <i class="fa-solid fa-moon fa-xl" id="måne" onclick="ToggleL()"></i>
             </div>
         </header>
+        <nav class="nav" id="dropdown">
+                <a href="index.html" id="home" class="subtitle">Home</a>
+                <a href="minesweeper.html" id="game" class="subtitle">Minesweeper</a>
+                <a href="" class="subtitle" id="form">Contact Us</a>
+        </nav>
+        <div class="content">
+            <img src="" alt="" id="bild1">
+        </div>
     </div>
 </body>
 </html>

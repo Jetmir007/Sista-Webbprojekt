@@ -1,5 +1,5 @@
 
-  @media (max-width: 578px) {
+  @media (max-width: 660px) {
     .grid-container {
       display: grid;
       grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
@@ -11,36 +11,51 @@
         ". faq faq faq faq .";
     }
   
-    header {
+    #header{
       grid-area: header;
-      display: grid;
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas: "wrench head theme";
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       padding: 0.5rem;
+      margin: 0.5rem;
     }
   
     .wrench {
       grid-area: wrench;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
   
     .head {
       grid-area: head;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 1.5rem;
       font-weight: bold;
     }
   
     .theme {
       grid-area: theme;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+
+    #dropdown{
+      grid-area: nav;
+      display: none;
+      border: 1px solid gray;
+      border-radius: 8px;
+      box-shadow: 2px 2px 2px lightgray;
+      padding: 5px;
+      margin-left: 12px;
+      width: 60%;
+    }
+
+    #home{
+      padding: 4px;
+      margin-right: 6px;
+    }
+
+    #game{
+      margin-right: 6px;
+    }
+
+    #måne{
+      display: none;
     }
   }
   
