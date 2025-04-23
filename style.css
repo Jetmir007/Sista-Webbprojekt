@@ -10,6 +10,21 @@
         ". content content content content ."
         ". faq faq faq faq .";
     }
+
+    .content{
+      grid-area: content;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1.5fr 1fr 1fr;
+      grid-template-areas: 
+      "bild1 bild1"
+      "text1 bild2"
+      "bild3 text2";
+    }
+
+    #bild1{
+      grid-area: bild1;
+    }
   
     #header{
       grid-area: header;
@@ -42,7 +57,7 @@
       box-shadow: 2px 2px 2px lightgray;
       padding: 5px;
       margin-left: 12px;
-      width: 60%;
+      min-width: 60%;
     }
 
     #home{
