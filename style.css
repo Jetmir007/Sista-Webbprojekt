@@ -1,5 +1,8 @@
 
   @media (max-width: 660px) {
+    *{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
     .grid-container {
       display: grid;
       grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
@@ -34,10 +37,29 @@
       padding: 3px;
     }
 
+    #text1{
+      border: 1px groove darkgrey;
+    }
+
+    #text2{
+      border: 1px groove darkgrey;
+    }
+
     .bild2{
       grid-area: bild2;
       max-height: 100px;
       width: 100%;
+    }
+
+    .bild3{
+      grid-area: bild3;
+      max-height: 120px;
+      width: 98%;
+    }
+
+    .text2{
+      grid-area: text2;
+      padding: 3px;
     }
   
     #header{
@@ -74,13 +96,77 @@
       min-width: 60%;
     }
 
+    #home:hover, #game:hover, #form:hover{
+      background-color: darkgray;
+    }
+
     #home{
       padding: 4px;
       margin-right: 6px;
+      border-radius: 5px;
     }
 
     #game{
+      padding: 4px;
       margin-right: 6px;
+      border-radius: 5px;
+    }
+
+    #form{
+      padding: 4px;
+      border-radius: 5px;
+    }
+
+    .faq{
+      grid-area: faq;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr;
+      grid-template-areas: 
+      "faqh faqh faqh"
+      "faq1 faq2 faq3"
+      "faq4 faq5 faq6";
+    }
+
+    .faqhead{
+      grid-area: faqh;
+      padding: 10px;
+      border-bottom: 1px solid;
+    }
+
+    #faqheader{
+      padding: 10px;
+      margin-bottom: 0px;
+    }
+
+    .faq1{
+      grid-area: faq1;
+      padding: 10px;
+    }
+
+    .faq2{
+      grid-area: faq2;
+      padding: 10px;
+    }
+
+    .faq3{
+      grid-area: faq3;
+      padding: 10px;
+    }
+
+    .faq4{
+      grid-area: faq4;
+      padding: 10px;
+    }
+
+    .faq5{
+      grid-area: faq5;
+      padding: 10px;
+    }
+
+    .faq6{
+      grid-area: faq6;
+      padding: 10px;
     }
 
     #måne{
