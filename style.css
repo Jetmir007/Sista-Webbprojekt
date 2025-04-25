@@ -22,8 +22,16 @@
       "bild3 text2";
     }
 
-    #bild1{
+    .bild1{
       grid-area: bild1;
+      max-height: 128px;
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .text1{
+      grid-area: text1;
+      padding: 3px;
     }
   
     #header{
