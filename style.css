@@ -33,6 +33,12 @@
       grid-area: text1;
       padding: 3px;
     }
+
+    .bild2{
+      grid-area: bild2;
+      max-height: 100px;
+      width: 100%;
+    }
   
     #header{
       grid-area: header;
