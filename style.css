@@ -1,176 +1,192 @@
-
-  @media (max-width: 660px) {
-    *{
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-    .grid-container {
-      display: grid;
-      grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
-      grid-template-rows: 50px 40px 1.5fr 1fr;
-      grid-template-areas:
-        ". header header header header ."
-        ". nav nav nav nav ."
-        ". content content content content ."
-        ". faq faq faq faq .";
-    }
-
-    .content{
-      grid-area: content;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1.5fr 1fr 1fr;
-      grid-template-areas: 
-      "bild1 bild1"
-      "text1 bild2"
-      "bild3 text2";
-    }
-
-    .bild1{
-      grid-area: bild1;
-      max-height: 128px;
-      width: 100%;
-      margin-top: 4px;
-    }
-
-    .text1{
-      grid-area: text1;
-      padding: 3px;
-    }
-
-    #text1{
-      border: 1px groove darkgrey;
-    }
-
-    #text2{
-      border: 1px groove darkgrey;
-    }
-
-    .bild2{
-      grid-area: bild2;
-      max-height: 100px;
-      width: 100%;
-    }
-
-    .bild3{
-      grid-area: bild3;
-      max-height: 120px;
-      width: 98%;
-    }
-
-    .text2{
-      grid-area: text2;
-      padding: 3px;
-    }
-  
-    #header{
-      grid-area: header;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem;
-      margin: 0.5rem;
-    }
-  
-    .wrench {
-      grid-area: wrench;
-    }
-  
-    .head {
-      grid-area: head;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-  
-    .theme {
-      grid-area: theme;
-    }
-
-    #dropdown{
-      grid-area: nav;
-      display: none;
-      border: 1px solid gray;
-      border-radius: 8px;
-      box-shadow: 2px 2px 2px lightgray;
-      padding: 5px;
-      margin-left: 12px;
-      min-width: 60%;
-    }
-
-    #home:hover, #game:hover, #form:hover{
-      background-color: darkgray;
-    }
-
-    #home{
-      padding: 4px;
-      margin-right: 6px;
-      border-radius: 5px;
-    }
-
-    #game{
-      padding: 4px;
-      margin-right: 6px;
-      border-radius: 5px;
-    }
-
-    #form{
-      padding: 4px;
-      border-radius: 5px;
-    }
-
-    .faq{
-      grid-area: faq;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 0.5fr 1fr 1fr;
-      grid-template-areas: 
-      "faqh faqh faqh"
-      "faq1 faq2 faq3"
-      "faq4 faq5 faq6";
-    }
-
-    .faqhead{
-      grid-area: faqh;
-      padding: 10px;
-      border-bottom: 1px solid;
-    }
-
-    #faqheader{
-      padding: 10px;
-      margin-bottom: 0px;
-    }
-
-    .faq1{
-      grid-area: faq1;
-      padding: 10px;
-    }
-
-    .faq2{
-      grid-area: faq2;
-      padding: 10px;
-    }
-
-    .faq3{
-      grid-area: faq3;
-      padding: 10px;
-    }
-
-    .faq4{
-      grid-area: faq4;
-      padding: 10px;
-    }
-
-    .faq5{
-      grid-area: faq5;
-      padding: 10px;
-    }
-
-    .faq6{
-      grid-area: faq6;
-      padding: 10px;
-    }
-
-    #måne{
-      display: none;
-    }
+@media (max-width: 660px) {
+  *{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
+    grid-template-rows: 50px 40px 1.5fr 1fr;
+    grid-template-areas:
+      ". header header header header ."
+      ". nav nav nav nav ."
+      ". content content content content ."
+      ". faq faq faq faq .";
+  }
+  .form{
+    grid-area: content;
+    padding: 3px;
+    margin-top: 8%;
+  }
+  .kontakter{
+    grid-area: faq;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "headK headK"
+    "adress tider"
+    "nummer tider"
+    "mail tider";
+    background-color: rgba(193, 193, 193, 0.734);
+    margin-top: 50px;
+    max-height: 255px;
+  }
+  .konhead{
+    grid-area: headK;
+  }
+  .position{
+    grid-area: adress;
+  }
+  .mail{
+    grid-area: mail;
+  }
+  .nummer{
+    grid-area: nummer;
+  }
+  .tider{
+    grid-area: tider;
+  }
+  .content{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-template-areas: 
+    "bild1 bild1"
+    "text1 bild2"
+    "bild3 text2";
+  }
+  .bild1{
+    grid-area: bild1;
+    max-height: 128px;
+    width: 100%;
+    margin-top: 4px;
+  }
+  .text1{
+    grid-area: text1;
+    padding: 3px;
+  }
+  #text1{
+    border: 1px groove darkgrey;
+  }
+  #text2{
+    border: 1px groove darkgrey;
+  }
+  .bild2{
+    grid-area: bild2;
+    max-height: 100px;
+    width: 100%;
+  }
+  .bild3{
+    grid-area: bild3;
+    max-height: 120px;
+    width: 98%;
+  }
+  .text2{
+    grid-area: text2;
+    padding: 3px;
+  }
+
+  #header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-bottom: 1px solid gray;
+  }
+
+  .wrench {
+    grid-area: wrench;
+  }
+
+  .head {
+    grid-area: head;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .theme {
+    grid-area: theme;
+  }
+  #dropdown{
+    grid-area: nav;
+    display: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px lightgray;
+    padding: 5px;
+    margin-left: 12px;
+    min-width: 60%;
+  }
+  #home:hover, #game:hover, #form:hover{
+    background-color: darkgray;
+  }
+  #home{
+    padding: 4px;
+    margin-right: 6px;
+    border-radius: 5px;
+  }
+  #game{
+    padding: 4px;
+    margin-right: 6px;
+    border-radius: 5px;
+  }
+  #form{
+    padding: 4px;
+    border-radius: 5px;
+  }
+  .faq{
+    grid-area: faq;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: 
+    "faqh faqh faqh"
+    "faq1 faq2 faq3"
+    "faq4 faq5 faq6";
+  }
+  .faqhead{
+    grid-area: faqh;
+    padding: 10px;
+    border-bottom: 1px solid;
+  }
+  #faqheader{
+    padding: 10px;
+    margin-bottom: 0px;
+  }
+  .faq1{
+    grid-area: faq1;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .faq2{
+    grid-area: faq2;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .faq3{
+    grid-area: faq3;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .faq4{
+    grid-area: faq4;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .faq5{
+    grid-area: faq5;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  .faq6{
+    grid-area: faq6;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px;
+  }
+  #måne{
+    display: none;
+  }
+}
