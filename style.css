@@ -189,4 +189,31 @@
   #måne{
     display: none;
   }
+  .grid-containerH{
+    display: grid;
+    grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
+    grid-template-rows: 50px 40px 60px 1fr;
+    grid-template-areas:
+      ". header header header header ."
+      ". nav nav nav nav ."
+      ". mineH mineH mineH mineH ."
+      ". spel spel spel spel .";
+  }
+  .minehead{
+    grid-area: mineH;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkgray;
+    box-shadow: 1px 1px 1px darkred;
+  }
+  .minesweeper{
+    grid-area: spel;
+  }
+  canvas{
+    grid-area: spel;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px;
+    aspect-ratio: 1;
+  }
 }

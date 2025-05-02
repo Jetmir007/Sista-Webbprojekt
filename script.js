@@ -24,3 +24,24 @@ function Nav(){
         drop = false
     }
 }
+let a = 0
+function Spelplan(){
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+    for (let index = 0; index < 16; index++) {
+        ctx.moveTo(40*index,0)
+        ctx.lineTo(40*index, 640)
+        ctx.stroke()
+    }
+    for (let index = 0; index < 16; index++) {
+        ctx.moveTo(0,40*index)
+        ctx.lineTo(640, index*40)
+        ctx.stroke()
+    }
+    canvas.addEventListener('click', function(event){
+        a+=1
+        console.log(a)
+        console.log(event)
+    })
+}
+setInterval(Spelplan, 100)
