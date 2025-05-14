@@ -28,6 +28,7 @@ let a = 0
 function Spelplan(){
     const canvas = document.getElementById("myCanvas");
     const ctx = canvas.getContext("2d");
+    ctx.strokeStyle = "grey"
     for (let index = 0; index < 16; index++) {
         ctx.moveTo(40*index,0)
         ctx.lineTo(40*index, 640)
@@ -42,6 +43,13 @@ function Spelplan(){
         a+=1
         console.log(a)
         console.log(event)
-    })
+        let x = event.pageX
+        let y = event.pageY
+        console.log(x + ", " + y)
+        if(x<100&&y<170){
+            alert("hej")
+        }
+    }
+    )
 }
-setInterval(Spelplan, 100)
+setInterval(Spelplan, 10000)
