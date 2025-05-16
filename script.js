@@ -24,6 +24,7 @@ function Nav(){
         drop = false
     }
 }
+
 let a = 0
 function Spelplan(){
     const canvas = document.getElementById("myCanvas");
@@ -40,16 +41,13 @@ function Spelplan(){
         ctx.stroke()
     }
     canvas.addEventListener('click', function(event){
-        a+=1
-        console.log(a)
+        a++
         console.log(event)
-        let x = event.pageX
-        let y = event.pageY
-        console.log(x + ", " + y)
-        if(x<100&&y<170){
-            alert("hej")
-        }
+        let x = event.offsetX
+        let y = event.offsetY
+        console.log(x + ", " + y + ", " + a)
     }
     )
 }
-setInterval(Spelplan, 10000)
+
+setTimeout(Spelplan, 100)
