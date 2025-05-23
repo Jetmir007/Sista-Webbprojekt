@@ -1,3 +1,4 @@
+//Light-Dark Mode
 function ToggleD(){
     let html = document.getElementsByTagName("html") 
     html[0].classList.toggle("theme-dark")
@@ -12,6 +13,7 @@ function ToggleL(){
     document.getElementById("måne").style.display = "none"
 }
 
+//Dropdown
 let drop = false
 
 function Nav(){
@@ -110,7 +112,7 @@ function DrawBoard(){
             }
 
             if(revealed[i][j]){
-                if(board[i][j]===-1){
+                if(board[i][j]==-1){
                     ctx.fillStyle = "red"
                     ctx.fillText("💣", xPos+20, yPos+20)
                 }
