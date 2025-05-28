@@ -8,7 +8,7 @@ function ToggleD(){
 
 function ToggleL(){
     let html = document.getElementsByTagName("html") 
-    html[0].classList.toggle("theme-dark")
+    html[0].classList.remove("theme-dark")
     document.getElementById("sol").style.display = "block"
     document.getElementById("måne").style.display = "none"
 }
@@ -29,19 +29,42 @@ function Nav(){
 
 //Minesweeper
 
-const rows = 16
-const cols = 16
-const blocksize = 40
-const totalmines = 40
+let rows, cols, totalmines, blocksize;
 let board = []
 let revealed = []
 let flagged = []
 let firstclick = true
 let gameover = false
 
+function Level(level){
+    if(level === "easy"){
+        rows = 8
+        cols = 8
+        totalmines = 10
+        blocksize = 80
+    }
+    else if(level === "medium"){
+        rows = 16
+        cols = 16
+        totalmines = 40
+        blocksize = 40
+    }
+    else if (level === "hard"){
+        rows = 24
+        cols = 24
+        totalmines = 99
+        blocksize = 26.67
+    }
+
+
+    Reset()
+    Spelplan()
+}
+
 function placeMine(excludeX, excludeY){
     board = Array.from({length:rows}, () => Array(cols).fill(0))
     revealed = Array.from({length:rows}, () => Array(cols).fill(false))
+    flagged = Array.from({length:rows}, () => Array(cols).fill(false))
 
     let minesplaced = 0
     while(minesplaced<totalmines){
@@ -102,23 +125,29 @@ function DrawBoard(){
             let xPos = j*blocksize
             let yPos = i*blocksize
 
-            ctx.fillStyle = revealed[i][j] ? "#eee" : "lightgreen"
+            if(revealed[i][j]){
+                ctx.fillStyle = "#eee"
+            }
+            else{
+                ctx.fillStyle = "green"
+            }
+
             ctx.fillRect(xPos, yPos, blocksize, blocksize)
             ctx.strokeRect(xPos, yPos, blocksize, blocksize)
 
             if(flagged[i][j]&&!revealed[i][j]){
-                ctx.fillStyle = "orange"
-                ctx.fillText("🚩", xPos+20, yPos+20)
+                ctx.fillStyle = "red"
+                ctx.fillText("🚩", xPos+blocksize/2, yPos+blocksize/2)
             }
 
             if(revealed[i][j]){
-                if(board[i][j]==-1){
+                if(board[i][j]===-1){
                     ctx.fillStyle = "red"
-                    ctx.fillText("💣", xPos+20, yPos+20)
+                    ctx.fillText("💣", xPos+blocksize/2, yPos+blocksize/2)
                 }
                 else if(board[i][j]>0){
                     ctx.fillStyle = "black"
-                    ctx.fillText(board[i][j], xPos+20, yPos+20)
+                    ctx.fillText(board[i][j], xPos+blocksize/2, yPos+blocksize/2)
                 }
             }
         }        
@@ -126,6 +155,10 @@ function DrawBoard(){
 }
 
 function Win(){
+    if(gameover){
+        return
+    }
+
     let safe = 0
     for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
@@ -164,7 +197,9 @@ function Spelplan(){
 
         Reveal(x, y)
         DrawBoard()
-        Win()
+        if(!gameover){
+            Win()
+        }
     })
 
     canvas.addEventListener('contextmenu', function(event){
@@ -184,9 +219,9 @@ function Spelplan(){
 function Reset(){
     firstclick = true
     gameover = false
-    board = []
-    revealed = []
-    flagged = []
+    board = Array.from({length:rows}, () => Array(cols).fill(0))
+    revealed = Array.from({length:rows}, () => Array(cols).fill(false))
+    flagged = Array.from({length:rows}, () => Array(cols).fill(false))  
     DrawBoard()
 }
 
@@ -218,6 +253,7 @@ function GameOver(message){
     restart.onclick = () => {
         document.body.removeChild(overlay)
         Reset();
+        Spelplan()
     }
 
     container.appendChild(msg)
@@ -228,5 +264,6 @@ function GameOver(message){
 
 window.onload = () => {
     Spelplan()
+    Level("medium")
     DrawBoard()
 }

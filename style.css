@@ -1,4 +1,4 @@
-@media (max-width: 660px) {
+@media (max-width: 680px) {
   *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
@@ -27,7 +27,7 @@
     "adress tider"
     "nummer tider"
     "mail tider";
-    background-color: rgba(193, 193, 193, 0.734);
+    background-color: rgba(87, 84, 84, 0.734);
     margin-top: 50px;
     max-height: 255px;
   }
@@ -121,7 +121,7 @@
     min-width: 60%;
   }
   #home:hover, #game:hover, #form:hover{
-    background-color: darkgray;
+    background-color: #c9c9c9;
   }
   #home{
     padding: 4px;
@@ -192,12 +192,17 @@
   .grid-containerH{
     display: grid;
     grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
-    grid-template-rows: 50px 40px 60px 1fr;
+    grid-template-rows: 50px 40px 60px 60px 1fr;
     grid-template-areas:
       ". header header header header ."
       ". nav nav nav nav ."
       ". mineH mineH mineH mineH ."
+      ". level level . . ."
       ". spel spel spel spel .";
+  }
+  #level{
+    grid-area: level;
+    margin: 1rem;
   }
   .minehead{
     grid-area: mineH;

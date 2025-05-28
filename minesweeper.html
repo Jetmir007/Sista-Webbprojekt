@@ -31,6 +31,13 @@
                 <a href="contact.html" class="subtitle" id="form">Contact Us</a>
         </nav>
         <h2 class="subtitle is-4 minehead">Minesweeper</h2>
+        <div class="select is-small" id="level">
+            <select onchange="Level(this.value)" id="levelselect">
+                <option value="easy">Easy</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
         <div class="minesweeper">
             <canvas id="myCanvas" width="638px" height="638px"></canvas>
             
