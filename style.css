@@ -1,7 +1,8 @@
-@media (max-width: 680px) {
+@media (max-width: 430px) {
   *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
+  
   .grid-container {
     display: grid;
     grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
@@ -28,14 +29,14 @@
     "nummer tider"
     "mail tider";
     background-color: rgba(87, 84, 84, 0.734);
-    margin-top: 50px;
-    max-height: 255px;
+    margin-top: 30px;
+    max-height: 300px;
   }
   .konhead{
     grid-area: headK;
   }
   .position{
-    grid-area: adress;
+    grid-area: adress;  
   }
   .mail{
     grid-area: mail;
@@ -191,17 +192,22 @@
   }
   .grid-containerH{
     display: grid;
+    height: 70vh;
     grid-template-columns: 1% 1fr 1fr 1fr 1fr 1%;
     grid-template-rows: 50px 40px 60px 60px 1fr;
     grid-template-areas:
       ". header header header header ."
       ". nav nav nav nav ."
       ". mineH mineH mineH mineH ."
-      ". level . . . ."
+      ". levelh level . . ."
       ". spel spel spel spel .";
   }
   #level{
     grid-area: level;
+    margin: 1rem;
+  }
+  #levelh{
+    grid-area: levelh;
     margin: 1rem;
   }
   .minehead{
@@ -214,6 +220,9 @@
   }
   .minesweeper{
     grid-area: spel;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   canvas{
     grid-area: spel;

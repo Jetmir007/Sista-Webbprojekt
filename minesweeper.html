@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="node_modules/bulma-extensions/bulma-checkradio/dist/css/bulma-checkradio.min.css">
     <script src="node_modules/bulma-toast/dist/bulma-toast.min.js"></script>
     <script src="https://kit.fontawesome.com/5fa0058b85.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="minesweeper.js"></script>
 </head>
 <body>
     <div class="grid-containerH">
@@ -31,6 +31,7 @@
                 <a href="contact.html" class="subtitle" id="form">Contact Us</a>
         </nav>
         <h2 class="subtitle is-4 minehead">Minesweeper</h2>
+        <p class="subtitle" id="levelh">Level</p>
         <div class="select is-small" id="level">
             <select onchange="Level(this.value)" id="levelselect">
                 <option value="easy">Easy</option>
@@ -39,8 +40,7 @@
             </select>
         </div>
         <div class="minesweeper">
-            <canvas id="myCanvas" width="638px" height="638px"></canvas>
-            
+            <canvas id="myCanvas" width="318px" height="318px"></canvas>
         </div>
     </div>
 </body>
